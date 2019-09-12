@@ -1,0 +1,21 @@
+#Creates virtual env in respective dir
+virtualenv venv --python=/usr/bin/python3.4
+
+#activates enn.
+source venv/bin/activate
+
+#xample#
+/data/1/jenkins/jenkinsEnv2.7/bin/activate
+
+#shows installed utilities
+pip freeze
+
+
+#used to install jupyter
+pip install jupyter
+
+#start jupyter 
+jupyter-notebook --no-browser --port=9999 --ip=0.0.0.0
+
+# start jupyter with no iteraction..will run indefinetely until forced to stop.
+nohup jupyter-notebook --no-browser --port=9999 --ip=0.0.0.0 & tail -f nohup.out
