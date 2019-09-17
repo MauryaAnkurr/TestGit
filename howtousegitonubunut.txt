@@ -9,3 +9,10 @@ git commit -m "(committed message)
 git push -u origin master
 git remote add origin master (url)
 git diff
+
+
+You can show changes that have been staged with the --cached flag:
+git diff --cached
+
+In more recent versions of git, you can also use the --staged flag (--staged is a synonym for --cached):
+git diff --staged
