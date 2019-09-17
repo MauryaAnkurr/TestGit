@@ -16,3 +16,37 @@ git diff --cached
 
 In more recent versions of git, you can also use the --staged flag (--staged is a synonym for --cached):
 git diff --staged
+
+Search commits that contain a log message:
+git log — all — grep=’day of week’
+
+ Branch
+List all branches:
+   git branch
+   
+Create the branch on your local machine and switch in this branch:
+   git checkout -b branch_name
+   
+Create branch from commit:
+   git branch branch_name sha1_of_commit
+   
+Push the branch to remote:
+   git push origin branch_name
+   
+Rename other branch:
+   git branch -m old new
+   
+Rename current branch:
+   git branch -m new
+   
+Rename remote branch:
+  git branch -m old new               # Rename branch locally    
+  git push origin :old                 # Delete the old branch    
+  git push --set-upstream origin new # Push the new branch, set local branch to track the new remote
+
+Delete a branch:
+  git branch -D the_local_branch
+  git push origin :the_remote_branch
+
+Delete all local branches but master
+  git branch | grep -v "master" | xargs git branch -D
